@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #1A2238;
+  --color-gold: #C4A77D;
+  --color-bone: #F4F4F4;
+  --color-midnight-light: #252D4A;
+
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-montserrat);
+}
+
+:root {
+  --background: #1A2238;
+  --foreground: #F4F4F4;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A2238;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4A77D;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B3966C;
+}
+
+/* Animations */
+@keyframes gold-shimmer {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-shimmer {
+  animation: gold-shimmer 2s infinite ease-in-out;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(196, 167, 125, 0.2);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 30px rgba(196, 167, 125, 0.4);
+}
