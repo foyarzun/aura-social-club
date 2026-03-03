@@ -3,7 +3,10 @@ import BookingCalendar from "@/components/profile/BookingCalendar";
 import { Star, MapPin, ShieldCheck, Heart, Share2, Award, Languages, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 export default function HostProfilePage() {
+
     // En una versión real, estos datos vendrían de Supabase basado en params.id
     const host = {
         id: "1",

@@ -4,7 +4,10 @@ import BookingList from "@/components/dashboard/BookingList";
 import AvailabilityManager from "@/components/dashboard/AvailabilityManager";
 import { Calendar, Users, MessageSquare, Settings, LayoutDashboard, Bell } from "lucide-react";
 
+export const dynamic = "force-dynamic";
+
 export default function DashboardPage() {
+
     return (
         <main className="min-h-screen bg-midnight">
             <Navbar />
@@ -31,8 +34,8 @@ export default function DashboardPage() {
                             <button
                                 key={item.label}
                                 className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl text-sm font-bold transition-all ${item.active
-                                        ? "bg-gold text-midnight shadow-lg shadow-gold/20"
-                                        : "text-bone/40 hover:bg-gold/5 hover:text-gold"
+                                    ? "bg-gold text-midnight shadow-lg shadow-gold/20"
+                                    : "text-bone/40 hover:bg-gold/5 hover:text-gold"
                                     }`}
                             >
                                 <item.icon size={20} />
